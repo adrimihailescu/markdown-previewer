@@ -26,7 +26,7 @@ const Editor = (props) => {
 
 \`\`\`
 
- I will make this text **bold**.
+ **I will make this text bold**.
  Or _italic_.
  Or... wait for it... **_both!_**
  And i will go crazy ~crossing stuff out~.
@@ -51,7 +51,7 @@ Got an image over here.
 	};
 
 	return (
-		<div className="App">
+		<div className="App responsive-app">
 			<header className="App-header">
 				<h1 className="title">My React Markdown Previewer</h1>
 			</header>
