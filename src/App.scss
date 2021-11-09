@@ -1,0 +1,13 @@
+.title {
+	display: flex;
+	justify-content: center;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+
+	align-items: center;
+	background-color: cadetblue;
+	color: blue;
+}

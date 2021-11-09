@@ -1,8 +1,8 @@
-import React from "react";
+import "./MarkdownEditor.scss";
 
 const MarkdownEditor = ({ onTextChange, editorArea }) => {
 	return (
-		<div>
+		<div className="editor-area">
 			<h1>Markdown Editor</h1>
 			<textarea
 				id="editor"
