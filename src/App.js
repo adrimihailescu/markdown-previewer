@@ -10,19 +10,40 @@ function App() {
   Heres some code they want top see, \`<div></div>\`, between 2 backticks. 
   > Block quote here
 
+
   \`\`\`
-  // Below is a multi-line code:
+// Below is a multi-line code:
+const Editor = (props) => {
+	return (
+		<textarea
+		id="editor"
+		onChange={props.onChange}
+		type="text"
+		value={props.markdown}
+		/>
+	);
+ };
+
+\`\`\`
+
+ I will make this text **bold**.
+ Or _italic_.
+ Or... wait for it... **_both!_**
+ And i will go crazy ~crossing stuff out~.
+ 
+ Numbered list below:
+  1. apples
+  2. oranges
+  3. pears
+---
+Got an image over here.
+
+![react logo](https://ensocore.com/media/61/reactjs-logo-sticker%20%281%29.jpg)
   
-  const Editor = (props) => {
-  return (
-    <textarea
-      id="editor"
-      onChange={props.onChange}
-      type="text"
-      value={props.markdown}
-    />
-  );
-};
+#### And here is where i have placed a link :
+[adrimihailescu](https://github.com/adrimihailescu "adrimihailescu")
+
+---
   `);
 
 	const onTextChange = (e) => {
@@ -33,11 +54,11 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				<h1 className="title">My React Markdown Previewer</h1>
-				<div className="container">
-					<MarkdownEditor editorArea={editorArea} onTextChange={onTextChange} />
-					<MarkdownPreviewer editorArea={editorArea} />
-				</div>
 			</header>
+			<div className="container">
+				<MarkdownEditor editorArea={editorArea} onTextChange={onTextChange} />
+				<MarkdownPreviewer editorArea={editorArea} />
+			</div>
 		</div>
 	);
 }

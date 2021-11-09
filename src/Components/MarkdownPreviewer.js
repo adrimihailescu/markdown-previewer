@@ -5,7 +5,7 @@ import "./MarkdownPreviewer.scss";
 const MarkdownPreviewer = ({ editorArea }) => {
 	return (
 		<div id="preview" className="previewer">
-			<h1>Markdown Previewer</h1>
+			<h2>See changes here</h2>
 			<ReactMarkdown children={editorArea} remarkPlugins={[remarkGfm]} />
 		</div>
 	);
